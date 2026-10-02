@@ -35,9 +35,9 @@ h1{font-size:clamp(64px,7.6vw,105px);font-weight:590;letter-spacing:-.06em;line-
 .music-main{display:grid;grid-template-columns:1.05fr .85fr;gap:76px;align-items:start}.music-copy h3{font-size:23px;margin-bottom:16px}.music-copy>p{margin-bottom:18px;max-width:550px}
 .festival-work{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}.festival-list{list-style:none;padding:0;margin:0}.festival-list li{font-size:23px;line-height:1.5;padding-block:8px;letter-spacing:-.025em}
 .drummer-photo{width:100%;max-width:410px;justify-self:end}.drummer-photo .photo-link{aspect-ratio:1087/1447}
-.music-archive{display:grid;grid-template-columns:1.2fr .75fr;gap:76px;align-items:center;margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
+.music-archive{margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
 .live-history article{display:grid;grid-template-columns:50px 1fr;gap:18px}.live-history article+article{margin-top:24px}.live-history .meta{padding-top:4px}.live-history h3{font-size:20px;margin-bottom:9px}.live-history p:not(.meta){font-size:15px}
-.artwork-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:340px;margin-left:auto}.artwork-pair .photo-link{aspect-ratio:1}
+.artwork-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:340px;margin-block:24px 8px}.artwork-pair .photo-link{aspect-ratio:1}
 .about-intro{display:grid;grid-template-columns:1.35fr .75fr;gap:92px;align-items:center}.about-copy h2{margin-bottom:20px}.about-lead{font-size:24px;line-height:1.65;letter-spacing:-.02em}
 .life-notes{margin:25px 0}.life-notes>div{display:grid;grid-template-columns:48px 1fr;gap:20px;padding-block:9px}.life-notes dt{font-weight:600}.life-notes dd{margin:0}.education{font-size:13px;color:var(--muted);margin-top:21px}.connection{margin-top:22px;max-width:650px}
 .about-portrait{width:100%;max-width:340px;justify-self:end}.about-portrait .photo-link{aspect-ratio:3/4}.about-portrait img{object-position:center 35%}
@@ -52,10 +52,13 @@ dialog{width:min(1120px,96vw);height:min(930px,94dvh);max-width:none;max-height:
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.photo-link:hover img,.text-link:hover span{transform:none}}
 
 /* Full-frame performance thumbnails stay subordinate to the music section. */
-.performance-gallery{margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.performance-gallery{margin-top:24px}
 .performance-gallery h3{font-size:20px}.performance-gallery .image-note{margin-bottom:20px}
 .performance-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
 .performance-grid .photo-link{aspect-ratio:4/3;background:#141619}
 .performance-grid .photo-link img{object-fit:contain}.performance-grid .photo-link:hover img{transform:none}
 @media(max-width:1024px) and (min-width:768px){.performance-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:767px){.performance-gallery{margin-top:28px;padding-top:25px}.performance-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}.performance-grid .photo:last-child{grid-column:1/-1}.performance-grid .photo:last-child .photo-link{aspect-ratio:3/2}}
+@media(max-width:767px){.performance-gallery{margin-top:24px}.performance-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}.performance-grid .photo:last-child{grid-column:1/-1}.performance-grid .photo:last-child .photo-link{aspect-ratio:3/2}}
+
+/* Selected photographs sit beside the text they accompany. */
+.work-intro,.life-story,.connection-story{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:56px;align-items:center}.work-intro-copy>p{margin-top:16px;max-width:720px}.context-photo{width:100%;max-width:260px;justify-self:end}.context-photo .photo-link{aspect-ratio:4/3}.life-story,.connection-story{margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}.story-copy{max-width:680px}.story-copy h3{font-size:22px;margin-bottom:14px}.story-copy .connection{margin-top:0}@media(max-width:767px){.work-intro,.life-story,.connection-story{grid-template-columns:1fr;gap:20px}.context-photo{justify-self:start;max-width:280px}.life-story,.connection-story{margin-top:28px;padding-top:26px}.story-copy h3{font-size:21px}}
